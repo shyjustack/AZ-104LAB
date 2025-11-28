@@ -25,36 +25,47 @@ const result = document.getElementById('result');
 let currentQuestion = 0;
 
 function loadQuestion() {
-    const q = quizData[currentQuestion];
-    const optionsHtml = q.options.map(opt => 
-        `<label>
-            <input type="checkbox" name="option" value="${opt}"> ${opt}
-        </label><br>`
-    ).join('');
+    quiz.innerHTML = "";
+    quizData.forEach((q, index) => {
+        const optionsHtml = q.options.map(opt => {
+            const inputType = Array.isArray(q.answer) ? "checkbox" : "radio";
+            return `<label>
+                        <input type="${inputType}" name="option${index}" value="${opt}"> ${opt}
+                    </label><br>`;
+        }).join('');
 
-    quiz.innerHTML = `<p>${q.question}</p>${optionsHtml}`;
+        quiz.innerHTML += `<div class="question-block">
+                               <p><strong>Q${index + 1}:</strong> ${q.question}</p>
+                               ${optionsHtml}
+                            </div><hr>`;
+    });
     result.innerHTML = "";
 }
 
 submitBtn.addEventListener('click', () => {
-    const selected = Array.from(document.querySelectorAll('input[name="option"]:checked')).map(i => i.value);
-    const q = quizData[currentQuestion];
+    let allCorrect = true;
 
-    // Check if answer is array (multiple correct)
-    let isCorrect;
-    if (Array.isArray(q.answer)) {
-        isCorrect = q.answer.length === selected.length && q.answer.every(ans => selected.includes(ans));
-    } else {
-        isCorrect = selected[0] === q.answer;
-    }
+    quizData.forEach((q, index) => {
+        const selected = Array.from(document.querySelectorAll(`input[name="option${index}"]:checked`)).map(i => i.value);
 
-    if (isCorrect) {
+        let isCorrect;
+        if (Array.isArray(q.answer)) {
+            isCorrect = q.answer.length === selected.length && q.answer.every(ans => selected.includes(ans));
+        } else {
+            isCorrect = selected[0] === q.answer;
+        }
+
+        if (!isCorrect) allCorrect = false;
+    });
+
+    if (allCorrect) {
         result.style.color = "green";
-        result.innerText = "✅ Correct!";
+        result.innerText = "✅ All answers are correct!";
     } else {
         result.style.color = "red";
-        result.innerText = "❌ Wrong!";
+        result.innerText = "❌ Some answers are wrong. Please check again!";
     }
 });
 
+// Load all questions on page load
 loadQuestion();
