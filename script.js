@@ -1,71 +1,52 @@
-const quizData = [
-    {
-        question: "You configure peering between MyVNetPrd and MyVNetDev. Once the peering is established, you try to route traffic from MyVNetPrd to an on-premises network that is connected to MyVNetDev through a VPN Gateway. However, the traffic is not being routed.\n\nWill enabling 'Use Remote Gateway' on the MyVNetPrd peering configuration resolve this issue?",
-        options: ["Yes", "No"],
-        answer: "Yes"
-    },
-    {
-        question: "You are securing your virtual network in Azure. Which of the following practices would be effective for establishing secure communication paths within your virtual network and controlling inbound and outbound traffic?",
-        options: [
-            "Associate an NSG with the subnet.",
-            "Implement Azure Bastion for every virtual machine in the network.",
-            "Set up security rules in NSGs to define source, destination, and allowed traffic."
-        ],
-        answer: [
-            "Associate an NSG with the subnet.",
-            "Set up security rules in NSGs to define source, destination, and allowed traffic."
-        ]
-    }
-];
-
-const quiz = document.getElementById('quiz');
-const submitBtn = document.getElementById('submit');
-const result = document.getElementById('result');
-
-let currentQuestion = 0;
-
-function loadQuestion() {
-    quiz.innerHTML = "";
-    quizData.forEach((q, index) => {
-        const optionsHtml = q.options.map(opt => {
-            const inputType = Array.isArray(q.answer) ? "checkbox" : "radio";
-            return `<label>
-                        <input type="${inputType}" name="option${index}" value="${opt}"> ${opt}
-                    </label><br>`;
-        }).join('');
-
-        quiz.innerHTML += `<div class="question-block">
-                               <p><strong>Q${index + 1}:</strong> ${q.question}</p>
-                               ${optionsHtml}
-                            </div><hr>`;
-    });
-    result.innerHTML = "";
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 20px;
+    min-height: 100vh;
+    background: #f2f2f2;
 }
 
-submitBtn.addEventListener('click', () => {
-    let allCorrect = true;
+.quiz-container {
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.15);
+    width: 700px;
+    max-width: 90%;
+    box-sizing: border-box;
+}
 
-    quizData.forEach((q, index) => {
-        const selected = Array.from(document.querySelectorAll(`input[name="option${index}"]:checked`)).map(i => i.value);
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
 
-        let isCorrect;
-        if (Array.isArray(q.answer)) {
-            isCorrect = q.answer.length === selected.length && q.answer.every(ans => selected.includes(ans));
-        } else {
-            isCorrect = selected[0] === q.answer;
-        }
+.question-block {
+    margin-bottom: 20px;
+}
 
-        if (!isCorrect) allCorrect = false;
-    });
+button {
+    display: block;
+    margin: 20px auto 0;
+    padding: 12px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #0078D7;
+    color: white;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+}
 
-    if (allCorrect) {
-        result.style.color = "green";
-        result.innerText = "✅ All answers are correct!";
-    } else {
-        result.style.color = "red";
-        result.innerText = "❌ Some answers are wrong. Please check again!";
-    }
-});
+button:hover {
+    background-color: #005A9E;
+}
 
-// Load all questions on page load
-loadQuestion();
+#result {
+    text-align: center;
+    margin-top: 25px;
+    font-weight: bold;
+    font-size: 18px;
+}
