@@ -9,12 +9,23 @@ const quizData = [
         options: [
             "Associate an NSG with the subnet.",
             "Implement Azure Bastion for every virtual machine in the network.",
-            "Set up security rules in NSGs to define source, destination, and allowed traffic."
+            "Set up security rules in NSGs to define source, destination, and allowed traffic.",
+            "Assign a public IP address to each resource for direct access."
         ],
         answer: [
             "Associate an NSG with the subnet.",
             "Set up security rules in NSGs to define source, destination, and allowed traffic."
         ]
+    },
+    {
+        question: "Your organization has decided to employ Azure Bastion for securely accessing VMs and to set up Azure PaaS services with enhanced network security.\n\nWhat is the immediate benefit of using Azure Bastion in this context?",
+        options: [
+            "It provides DDoS protection for Azure services.",
+            "It allows direct RDP/SSH connectivity from your local machine to Azure VMs without exposing them to the public internet.",
+            "It automatically sets up private endpoints for all PaaS services.",
+            "It acts as a replacement for network security groups (NSGs)."
+        ],
+        answer: "It allows direct RDP/SSH connectivity from your local machine to Azure VMs without exposing them to the public internet."
     }
 ];
 
@@ -23,6 +34,7 @@ const nextBtn = document.getElementById('next');
 const result = document.getElementById('result');
 
 let currentQuestion = 0;
+let score = 0;
 
 function loadQuestion() {
     const q = quizData[currentQuestion];
@@ -62,21 +74,24 @@ nextBtn.addEventListener('click', () => {
         isCorrect = selected[0] === q.answer;
     }
 
+    if (isCorrect) score++;
+
     // Show feedback
     result.style.color = isCorrect ? "green" : "red";
     result.innerText = isCorrect ? "✅ Correct!" : "❌ Wrong!";
 
-    // Move to next question immediately when user clicks Next again
-    nextBtn.onclick = () => {
+    // Move to next question after short delay
+    setTimeout(() => {
         currentQuestion++;
         if (currentQuestion < quizData.length) {
             loadQuestion();
         } else {
-            quiz.innerHTML = "<h2>🎉 Quiz Completed!</h2>";
+            quiz.innerHTML = `<h2>🎉 Quiz Completed!</h2>
+                              <p>Your score: ${score} / ${quizData.length}</p>`;
             nextBtn.style.display = "none";
             result.innerText = "";
         }
-    };
+    }, 800);
 });
 
 // Load first question
