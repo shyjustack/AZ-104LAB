@@ -17,6 +17,435 @@ const quizData = [
             "Set up security rules in NSGs to define source, destination, and allowed traffic."
         ]
     },
+	{
+        question: "You are deploying a web application in Azure and want to ensure its high availability and that it uses a custom domain.  Which of the following steps should you take? (Select two).",
+        options: [
+            "Add Custom Domain in Azure Portal",
+            "Assign a static public IP address to each VM running the web application.",
+            "Configure an Azure public load balancer and associate it with the VMs running the web application.",
+            "Directly route traffic from the custom domain to one VM for simplicity."
+        ],
+        answer: [
+            "Add Custom Domain in Azure Portal",
+            "Configure an Azure public load balancer and associate it with the VMs running the web application."
+        ]
+    },
+	{
+        question: "You are securing your virtual network in Azure. Which of the following practices would be effective for establishing secure communication paths within your virtual network and controlling inbound and outbound traffic?",
+        options: [
+            "Associate an NSG with the subnet.",
+            "Implement Azure Bastion for every virtual machine in the network.",
+            "Set up security rules in NSGs to define source, destination, and allowed traffic.",
+            "Assign a public IP address to each resource for direct access."
+        ],
+        answer: [
+            "Associate an NSG with the subnet.",
+            "Set up security rules in NSGs to define source, destination, and allowed traffic."
+        ]
+    },
+	{
+        question: "You are securing your virtual network in Azure. Which of the following practices would be effective for establishing secure communication paths within your virtual network and controlling inbound and outbound traffic?",
+        options: [
+            "Associate an NSG with the subnet.",
+            "Implement Azure Bastion for every virtual machine in the network.",
+            "Set up security rules in NSGs to define source, destination, and allowed traffic.",
+            "Assign a public IP address to each resource for direct access."
+        ],
+        answer: [
+            "Associate an NSG with the subnet.",
+            "Set up security rules in NSGs to define source, destination, and allowed traffic."
+        ]
+    },
+	{
+        question: "You are securing your virtual network in Azure. Which of the following practices would be effective for establishing secure communication paths within your virtual network and controlling inbound and outbound traffic?",
+        options: [
+            "Associate an NSG with the subnet.",
+            "Implement Azure Bastion for every virtual machine in the network.",
+            "Set up security rules in NSGs to define source, destination, and allowed traffic.",
+            "Assign a public IP address to each resource for direct access."
+        ],
+        answer: [
+            "Associate an NSG with the subnet.",
+            "Set up security rules in NSGs to define source, destination, and allowed traffic."
+        ]
+    },
+	{
+        question: "You are securing your virtual network in Azure. Which of the following practices would be effective for establishing secure communication paths within your virtual network and controlling inbound and outbound traffic?",
+        options: [
+            "Associate an NSG with the subnet.",
+            "Implement Azure Bastion for every virtual machine in the network.",
+            "Set up security rules in NSGs to define source, destination, and allowed traffic.",
+            "Assign a public IP address to each resource for direct access."
+        ],
+        answer: [
+            "Associate an NSG with the subnet.",
+            "Set up security rules in NSGs to define source, destination, and allowed traffic."
+        ]
+    },
+	{
+        question: "You are securing your virtual network in Azure. Which of the following practices would be effective for establishing secure communication paths within your virtual network and controlling inbound and outbound traffic?",
+        options: [
+            "Associate an NSG with the subnet.",
+            "Implement Azure Bastion for every virtual machine in the network.",
+            "Set up security rules in NSGs to define source, destination, and allowed traffic.",
+            "Assign a public IP address to each resource for direct access."
+        ],
+        answer: [
+            "Associate an NSG with the subnet.",
+            "Set up security rules in NSGs to define source, destination, and allowed traffic."
+        ]
+    },
+	{
+        question: "You are securing your virtual network in Azure. Which of the following practices would be effective for establishing secure communication paths within your virtual network and controlling inbound and outbound traffic?",
+        options: [
+            "Associate an NSG with the subnet.",
+            "Implement Azure Bastion for every virtual machine in the network.",
+            "Set up security rules in NSGs to define source, destination, and allowed traffic.",
+            "Assign a public IP address to each resource for direct access."
+        ],
+        answer: [
+            "Associate an NSG with the subnet.",
+            "Set up security rules in NSGs to define source, destination, and allowed traffic."
+        ]
+    },
+	{
+        question: "You are securing your virtual network in Azure. Which of the following practices would be effective for establishing secure communication paths within your virtual network and controlling inbound and outbound traffic?",
+        options: [
+            "Associate an NSG with the subnet.",
+            "Implement Azure Bastion for every virtual machine in the network.",
+            "Set up security rules in NSGs to define source, destination, and allowed traffic.",
+            "Assign a public IP address to each resource for direct access."
+        ],
+        answer: [
+            "Associate an NSG with the subnet.",
+            "Set up security rules in NSGs to define source, destination, and allowed traffic."
+        ]
+    },
+	{
+        question: "You are securing your virtual network in Azure. Which of the following practices would be effective for establishing secure communication paths within your virtual network and controlling inbound and outbound traffic?",
+        options: [
+            "Associate an NSG with the subnet.",
+            "Implement Azure Bastion for every virtual machine in the network.",
+            "Set up security rules in NSGs to define source, destination, and allowed traffic.",
+            "Assign a public IP address to each resource for direct access."
+        ],
+        answer: [
+            "Associate an NSG with the subnet.",
+            "Set up security rules in NSGs to define source, destination, and allowed traffic."
+        ]
+    },
+	{
+        question: "You are securing your virtual network in Azure. Which of the following practices would be effective for establishing secure communication paths within your virtual network and controlling inbound and outbound traffic?",
+        options: [
+            "Associate an NSG with the subnet.",
+            "Implement Azure Bastion for every virtual machine in the network.",
+            "Set up security rules in NSGs to define source, destination, and allowed traffic.",
+            "Assign a public IP address to each resource for direct access."
+        ],
+        answer: [
+            "Associate an NSG with the subnet.",
+            "Set up security rules in NSGs to define source, destination, and allowed traffic."
+        ]
+    },
+	{
+        question: "You are securing your virtual network in Azure. Which of the following practices would be effective for establishing secure communication paths within your virtual network and controlling inbound and outbound traffic?",
+        options: [
+            "Associate an NSG with the subnet.",
+            "Implement Azure Bastion for every virtual machine in the network.",
+            "Set up security rules in NSGs to define source, destination, and allowed traffic.",
+            "Assign a public IP address to each resource for direct access."
+        ],
+        answer: [
+            "Associate an NSG with the subnet.",
+            "Set up security rules in NSGs to define source, destination, and allowed traffic."
+        ]
+    },
+	{
+        question: "You are securing your virtual network in Azure. Which of the following practices would be effective for establishing secure communication paths within your virtual network and controlling inbound and outbound traffic?",
+        options: [
+            "Associate an NSG with the subnet.",
+            "Implement Azure Bastion for every virtual machine in the network.",
+            "Set up security rules in NSGs to define source, destination, and allowed traffic.",
+            "Assign a public IP address to each resource for direct access."
+        ],
+        answer: [
+            "Associate an NSG with the subnet.",
+            "Set up security rules in NSGs to define source, destination, and allowed traffic."
+        ]
+    },
+	{
+        question: "You are securing your virtual network in Azure. Which of the following practices would be effective for establishing secure communication paths within your virtual network and controlling inbound and outbound traffic?",
+        options: [
+            "Associate an NSG with the subnet.",
+            "Implement Azure Bastion for every virtual machine in the network.",
+            "Set up security rules in NSGs to define source, destination, and allowed traffic.",
+            "Assign a public IP address to each resource for direct access."
+        ],
+        answer: [
+            "Associate an NSG with the subnet.",
+            "Set up security rules in NSGs to define source, destination, and allowed traffic."
+        ]
+    },
+	{
+        question: "You are securing your virtual network in Azure. Which of the following practices would be effective for establishing secure communication paths within your virtual network and controlling inbound and outbound traffic?",
+        options: [
+            "Associate an NSG with the subnet.",
+            "Implement Azure Bastion for every virtual machine in the network.",
+            "Set up security rules in NSGs to define source, destination, and allowed traffic.",
+            "Assign a public IP address to each resource for direct access."
+        ],
+        answer: [
+            "Associate an NSG with the subnet.",
+            "Set up security rules in NSGs to define source, destination, and allowed traffic."
+        ]
+    },
+	{
+        question: "You are securing your virtual network in Azure. Which of the following practices would be effective for establishing secure communication paths within your virtual network and controlling inbound and outbound traffic?",
+        options: [
+            "Associate an NSG with the subnet.",
+            "Implement Azure Bastion for every virtual machine in the network.",
+            "Set up security rules in NSGs to define source, destination, and allowed traffic.",
+            "Assign a public IP address to each resource for direct access."
+        ],
+        answer: [
+            "Associate an NSG with the subnet.",
+            "Set up security rules in NSGs to define source, destination, and allowed traffic."
+        ]
+    },
+	{
+        question: "You are securing your virtual network in Azure. Which of the following practices would be effective for establishing secure communication paths within your virtual network and controlling inbound and outbound traffic?",
+        options: [
+            "Associate an NSG with the subnet.",
+            "Implement Azure Bastion for every virtual machine in the network.",
+            "Set up security rules in NSGs to define source, destination, and allowed traffic.",
+            "Assign a public IP address to each resource for direct access."
+        ],
+        answer: [
+            "Associate an NSG with the subnet.",
+            "Set up security rules in NSGs to define source, destination, and allowed traffic."
+        ]
+    },
+	{
+        question: "You are securing your virtual network in Azure. Which of the following practices would be effective for establishing secure communication paths within your virtual network and controlling inbound and outbound traffic?",
+        options: [
+            "Associate an NSG with the subnet.",
+            "Implement Azure Bastion for every virtual machine in the network.",
+            "Set up security rules in NSGs to define source, destination, and allowed traffic.",
+            "Assign a public IP address to each resource for direct access."
+        ],
+        answer: [
+            "Associate an NSG with the subnet.",
+            "Set up security rules in NSGs to define source, destination, and allowed traffic."
+        ]
+    },
+	{
+        question: "You are securing your virtual network in Azure. Which of the following practices would be effective for establishing secure communication paths within your virtual network and controlling inbound and outbound traffic?",
+        options: [
+            "Associate an NSG with the subnet.",
+            "Implement Azure Bastion for every virtual machine in the network.",
+            "Set up security rules in NSGs to define source, destination, and allowed traffic.",
+            "Assign a public IP address to each resource for direct access."
+        ],
+        answer: [
+            "Associate an NSG with the subnet.",
+            "Set up security rules in NSGs to define source, destination, and allowed traffic."
+        ]
+    },
+	{
+        question: "You are securing your virtual network in Azure. Which of the following practices would be effective for establishing secure communication paths within your virtual network and controlling inbound and outbound traffic?",
+        options: [
+            "Associate an NSG with the subnet.",
+            "Implement Azure Bastion for every virtual machine in the network.",
+            "Set up security rules in NSGs to define source, destination, and allowed traffic.",
+            "Assign a public IP address to each resource for direct access."
+        ],
+        answer: [
+            "Associate an NSG with the subnet.",
+            "Set up security rules in NSGs to define source, destination, and allowed traffic."
+        ]
+    },
+	{
+        question: "You are securing your virtual network in Azure. Which of the following practices would be effective for establishing secure communication paths within your virtual network and controlling inbound and outbound traffic?",
+        options: [
+            "Associate an NSG with the subnet.",
+            "Implement Azure Bastion for every virtual machine in the network.",
+            "Set up security rules in NSGs to define source, destination, and allowed traffic.",
+            "Assign a public IP address to each resource for direct access."
+        ],
+        answer: [
+            "Associate an NSG with the subnet.",
+            "Set up security rules in NSGs to define source, destination, and allowed traffic."
+        ]
+    },
+	{
+        question: "You are securing your virtual network in Azure. Which of the following practices would be effective for establishing secure communication paths within your virtual network and controlling inbound and outbound traffic?",
+        options: [
+            "Associate an NSG with the subnet.",
+            "Implement Azure Bastion for every virtual machine in the network.",
+            "Set up security rules in NSGs to define source, destination, and allowed traffic.",
+            "Assign a public IP address to each resource for direct access."
+        ],
+        answer: [
+            "Associate an NSG with the subnet.",
+            "Set up security rules in NSGs to define source, destination, and allowed traffic."
+        ]
+    },
+	{
+        question: "You are securing your virtual network in Azure. Which of the following practices would be effective for establishing secure communication paths within your virtual network and controlling inbound and outbound traffic?",
+        options: [
+            "Associate an NSG with the subnet.",
+            "Implement Azure Bastion for every virtual machine in the network.",
+            "Set up security rules in NSGs to define source, destination, and allowed traffic.",
+            "Assign a public IP address to each resource for direct access."
+        ],
+        answer: [
+            "Associate an NSG with the subnet.",
+            "Set up security rules in NSGs to define source, destination, and allowed traffic."
+        ]
+    },
+	{
+        question: "You are securing your virtual network in Azure. Which of the following practices would be effective for establishing secure communication paths within your virtual network and controlling inbound and outbound traffic?",
+        options: [
+            "Associate an NSG with the subnet.",
+            "Implement Azure Bastion for every virtual machine in the network.",
+            "Set up security rules in NSGs to define source, destination, and allowed traffic.",
+            "Assign a public IP address to each resource for direct access."
+        ],
+        answer: [
+            "Associate an NSG with the subnet.",
+            "Set up security rules in NSGs to define source, destination, and allowed traffic."
+        ]
+    },
+	{
+        question: "You are securing your virtual network in Azure. Which of the following practices would be effective for establishing secure communication paths within your virtual network and controlling inbound and outbound traffic?",
+        options: [
+            "Associate an NSG with the subnet.",
+            "Implement Azure Bastion for every virtual machine in the network.",
+            "Set up security rules in NSGs to define source, destination, and allowed traffic.",
+            "Assign a public IP address to each resource for direct access."
+        ],
+        answer: [
+            "Associate an NSG with the subnet.",
+            "Set up security rules in NSGs to define source, destination, and allowed traffic."
+        ]
+    },
+	{
+        question: "You are securing your virtual network in Azure. Which of the following practices would be effective for establishing secure communication paths within your virtual network and controlling inbound and outbound traffic?",
+        options: [
+            "Associate an NSG with the subnet.",
+            "Implement Azure Bastion for every virtual machine in the network.",
+            "Set up security rules in NSGs to define source, destination, and allowed traffic.",
+            "Assign a public IP address to each resource for direct access."
+        ],
+        answer: [
+            "Associate an NSG with the subnet.",
+            "Set up security rules in NSGs to define source, destination, and allowed traffic."
+        ]
+    },
+	{
+        question: "You are securing your virtual network in Azure. Which of the following practices would be effective for establishing secure communication paths within your virtual network and controlling inbound and outbound traffic?",
+        options: [
+            "Associate an NSG with the subnet.",
+            "Implement Azure Bastion for every virtual machine in the network.",
+            "Set up security rules in NSGs to define source, destination, and allowed traffic.",
+            "Assign a public IP address to each resource for direct access."
+        ],
+        answer: [
+            "Associate an NSG with the subnet.",
+            "Set up security rules in NSGs to define source, destination, and allowed traffic."
+        ]
+    },
+	{
+        question: "You are securing your virtual network in Azure. Which of the following practices would be effective for establishing secure communication paths within your virtual network and controlling inbound and outbound traffic?",
+        options: [
+            "Associate an NSG with the subnet.",
+            "Implement Azure Bastion for every virtual machine in the network.",
+            "Set up security rules in NSGs to define source, destination, and allowed traffic.",
+            "Assign a public IP address to each resource for direct access."
+        ],
+        answer: [
+            "Associate an NSG with the subnet.",
+            "Set up security rules in NSGs to define source, destination, and allowed traffic."
+        ]
+    },
+	{
+        question: "You are securing your virtual network in Azure. Which of the following practices would be effective for establishing secure communication paths within your virtual network and controlling inbound and outbound traffic?",
+        options: [
+            "Associate an NSG with the subnet.",
+            "Implement Azure Bastion for every virtual machine in the network.",
+            "Set up security rules in NSGs to define source, destination, and allowed traffic.",
+            "Assign a public IP address to each resource for direct access."
+        ],
+        answer: [
+            "Associate an NSG with the subnet.",
+            "Set up security rules in NSGs to define source, destination, and allowed traffic."
+        ]
+    },
+	{
+        question: "You are securing your virtual network in Azure. Which of the following practices would be effective for establishing secure communication paths within your virtual network and controlling inbound and outbound traffic?",
+        options: [
+            "Associate an NSG with the subnet.",
+            "Implement Azure Bastion for every virtual machine in the network.",
+            "Set up security rules in NSGs to define source, destination, and allowed traffic.",
+            "Assign a public IP address to each resource for direct access."
+        ],
+        answer: [
+            "Associate an NSG with the subnet.",
+            "Set up security rules in NSGs to define source, destination, and allowed traffic."
+        ]
+    },
+	{
+        question: "You are securing your virtual network in Azure. Which of the following practices would be effective for establishing secure communication paths within your virtual network and controlling inbound and outbound traffic?",
+        options: [
+            "Associate an NSG with the subnet.",
+            "Implement Azure Bastion for every virtual machine in the network.",
+            "Set up security rules in NSGs to define source, destination, and allowed traffic.",
+            "Assign a public IP address to each resource for direct access."
+        ],
+        answer: [
+            "Associate an NSG with the subnet.",
+            "Set up security rules in NSGs to define source, destination, and allowed traffic."
+        ]
+    },
+	{
+        question: "You are securing your virtual network in Azure. Which of the following practices would be effective for establishing secure communication paths within your virtual network and controlling inbound and outbound traffic?",
+        options: [
+            "Associate an NSG with the subnet.",
+            "Implement Azure Bastion for every virtual machine in the network.",
+            "Set up security rules in NSGs to define source, destination, and allowed traffic.",
+            "Assign a public IP address to each resource for direct access."
+        ],
+        answer: [
+            "Associate an NSG with the subnet.",
+            "Set up security rules in NSGs to define source, destination, and allowed traffic."
+        ]
+    },
+	{
+        question: "You are securing your virtual network in Azure. Which of the following practices would be effective for establishing secure communication paths within your virtual network and controlling inbound and outbound traffic?",
+        options: [
+            "Associate an NSG with the subnet.",
+            "Implement Azure Bastion for every virtual machine in the network.",
+            "Set up security rules in NSGs to define source, destination, and allowed traffic.",
+            "Assign a public IP address to each resource for direct access."
+        ],
+        answer: [
+            "Associate an NSG with the subnet.",
+            "Set up security rules in NSGs to define source, destination, and allowed traffic."
+        ]
+    },
+	{
+        question: "You are securing your virtual network in Azure. Which of the following practices would be effective for establishing secure communication paths within your virtual network and controlling inbound and outbound traffic?",
+        options: [
+            "Associate an NSG with the subnet.",
+            "Implement Azure Bastion for every virtual machine in the network.",
+            "Set up security rules in NSGs to define source, destination, and allowed traffic.",
+            "Assign a public IP address to each resource for direct access."
+        ],
+        answer: [
+            "Associate an NSG with the subnet.",
+            "Set up security rules in NSGs to define source, destination, and allowed traffic."
+        ]
+    },
     {
         question: "Your organization has decided to employ Azure Bastion for securely accessing VMs and to set up Azure PaaS services with enhanced network security.\n\nWhat is the immediate benefit of using Azure Bastion in this context?",
         options: [
