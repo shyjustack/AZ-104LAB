@@ -1,52 +1,85 @@
-body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start; /* top align so it looks better for long content */
-    padding: 40px 20px; /* add space around */
-    min-height: 100vh;
-    background: #f2f2f2;
+const quizData = [
+    {
+        question: "You configure peering between MyVNetPrd and MyVNetDev. Once the peering is established, you try to route traffic from MyVNetPrd to an on-premises network that is connected to MyVNetDev through a VPN Gateway. However, the traffic is not being routed.\n\nWill enabling 'Use Remote Gateway' on the MyVNetPrd peering configuration resolve this issue?",
+        options: ["Yes", "No"],
+        answer: "Yes"
+    },
+    {
+        question: "You are securing your virtual network in Azure. Which of the following practices would be effective for establishing secure communication paths within your virtual network and controlling inbound and outbound traffic?",
+        options: [
+            "Associate an NSG with the subnet.",
+            "Implement Azure Bastion for every virtual machine in the network.",
+            "Set up security rules in NSGs to define source, destination, and allowed traffic."
+        ],
+        answer: [
+            "Associate an NSG with the subnet.",
+            "Set up security rules in NSGs to define source, destination, and allowed traffic."
+        ]
+    }
+];
+
+const quiz = document.getElementById('quiz');
+const nextBtn = document.getElementById('next');
+const result = document.getElementById('result');
+
+let currentQuestion = 0;
+
+function loadQuestion() {
+    const q = quizData[currentQuestion];
+    const optionsHtml = q.options.map(opt => {
+        const inputType = Array.isArray(q.answer) ? "checkbox" : "radio";
+        return `<label>
+                    <input type="${inputType}" name="option" value="${opt}"> ${opt}
+                </label><br>`;
+    }).join('');
+
+    quiz.innerHTML = `<div class="question-block">
+                        <p><strong>Q${currentQuestion + 1}:</strong> ${q.question}</p>
+                        ${optionsHtml}
+                       </div>`;
+    result.innerHTML = "";
+
+    nextBtn.innerText = currentQuestion === quizData.length - 1 ? "Submit" : "Next";
 }
 
-.quiz-container {
-    background: #fff;
-    padding: 30px 40px;
-    border-radius: 12px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.15);
-    width: 700px;        /* increased width */
-    max-width: 90%;      /* responsive for smaller screens */
-    box-sizing: border-box;
-}
+nextBtn.addEventListener('click', () => {
+    const q = quizData[currentQuestion];
+    const selected = Array.from(document.querySelectorAll('input[name="option"]:checked')).map(i => i.value);
 
-h1 {
-    text-align: center;
-    margin-bottom: 30px;
-}
+    // Validation
+    if (selected.length === 0) {
+        alert("Please select at least one answer!");
+        return;
+    }
 
-.question-block {
-    margin-bottom: 20px;
-}
+    // Check answer
+    let isCorrect;
+    if (Array.isArray(q.answer)) {
+        isCorrect = q.answer.length === selected.length && q.answer.every(ans => selected.includes(ans));
+    } else {
+        isCorrect = selected[0] === q.answer;
+    }
 
-button {
-    display: block;
-    margin: 20px auto 0;
-    padding: 12px 25px;
-    font-size: 16px;
-    cursor: pointer;
-    border: none;
-    background-color: #0078D7;
-    color: white;
-    border-radius: 6px;
-    transition: background-color 0.3s;
-}
+    if (isCorrect) {
+        result.style.color = "green";
+        result.innerText = "✅ Correct!";
+    } else {
+        result.style.color = "red";
+        result.innerText = "❌ Wrong!";
+    }
 
-button:hover {
-    background-color: #005A9E;
-}
+    // Move to next question after a short delay
+    setTimeout(() => {
+        result.innerText = "";
+        currentQuestion++;
+        if (currentQuestion < quizData.length) {
+            loadQuestion();
+        } else {
+            quiz.innerHTML = "<h2>🎉 Quiz Completed!</h2>";
+            nextBtn.style.display = "none";
+        }
+    }, 1000); // 1 second delay so user sees the feedback
+});
 
-#result {
-    text-align: center;
-    margin-top: 25px;
-    font-weight: bold;
-    font-size: 18px;
-}
+// Load first question
+loadQuestion();
